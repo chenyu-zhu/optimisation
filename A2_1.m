@@ -1,0 +1,11 @@
+x = linspace(-2,2);
+y = linspace(-2,2);
+[X,Y] = meshgrid(x,y);
+v = 100*(Y-X.^2).^2+(1-X).^2;
+[C,h]=contour(X,Y,v,[0,1,2,3,4,5,10,20,50,100,200,300]);
+clabel(C,h);
+%surface(X,Y,v);
+%surface(X,Y,v,'EdgeColor',[.8 .8 .8],'FaceColor','none');
+grid off;
+%view(-15,30);
+%colormap cool;
